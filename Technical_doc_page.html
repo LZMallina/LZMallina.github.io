@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Technical Documentation Page of Javascript</title>
+<style>
+/*global styling*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:10px;
+}
+body{
+    font-size:2rem;
+    font-family:"Noto Sans", sans-serif;
+    line-height:2x;
+    padding:2rem;
+    display:grid;
+    grid-template-areas:
+    "nav section"
+    "nav section"
+    "nav footer";
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    background:#b3ecff;
+    color:red;
+    padding-left:5rem;
+    padding-right:5rem;
+}
+header{
+    font-size:4rem;
+    border-bottom:solid red;
+    font-weight:bold;
+}
+/*navigation bar*/
+nav{
+    display:block;
+    margin:0;
+    width:25vw;
+    padding:4rem;
+    background:#e6f7ff;
+}
+#navbar ul{
+    list-style:none;
+    font-size:2rem;
+    text-align:center;
+    line-height:400%;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+@media only screen and (max-width:815px){
+    #navbar ul{
+        font-size:1.15rem;
+        height:500px;
+    }
+}
+#navbar header{
+    font-size:3rem;
+    font-weight:bold;
+    border-bottom:solid #99ddff;
+    text-align:center;
+    display:block;
+    margin-left:0;
+    margin-right:0;
+    }
+@media only screen and (max-width:815px){
+    #navbar header{
+        font-size:2rem;
+        margin-left:-5vw;
+        margin-right:-5vw;
+    }
+}
+main{
+    display:block;
+    margin:auto;
+    width:65vw;
+    padding:2rem;
+    line-height:2x;
+}
+section p{
+    padding-top:2rem;
+    padding-bottom:2rem;
+    text-align:justify;
+}
+section ol{
+    display:block;
+    margin:auto;
+    width:55vw;
+}
+@media only screen and (max-width:815px){
+    section ol{
+        width:44vw;
+    }
+}
+section code{
+    display:block;
+    margin:auto;
+    width:55vw;
+}
+footer{
+    background:#cceeff;
+    position:relative;
+    left:-35%;
+    text-align:center;
+    padding:9rem;
+    display:block;
+    margin:auto;
+    width:100vw;  
+}
+footer a {
+    color:blue;
+}
+</style>
+</head>
+<body>
+    <nav id="navbar">
+        <header>JS Tutorial</header>
+        <ul>
+            <li><a class = "nav-link" href=#Introduction>Introduction</a></li>
+            <li><a class = "nav-link" href=#Where_to> Where To</a></li>
+            <li><a class = "nav-link" href=#Output>Output</a></li>
+            <li><a class = "nav-link" href=#Statements>Statements</a></li>
+            <li><a class ="nav-link" href=#Syntax>Syntax</a></li>
+            <li><a class="nav-link" href=#Comments>Comments</a></li>
+        </ul>
+    </nav><!--end of nav bar-->
+<main id="main-doc">
+    <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>JavaScript is a programming language of HTML and the web.  Therefore, you should
+        know HTML and CSS before you begin this lesson.  JavaScript is easy to learn.
+        This tutorial will only summerize five sections:</p>
+        <ol>
+            <li>Where to</li>
+            <li>Output</li>
+            <li>Statements</li>
+            <li>Syntax</li>
+            <li>Comments</li>
+        </ol>
+        <p>JavaScript is one of the three component you must know in order to become a webdeveloper.
+        HTML is to bring words to the screen.  CSS is to style the website.  JavaScript is required to make the 
+        website interactive</p>
+    </section><!--end section of introduction-->
+
+    <section class="main-section" id="Where_to">
+        <header>Where To</header>
+        <p>In order for html to recognize a JavaScript, the code must be surrounded by the script element.  The script can be located in the head or body 
+        of the HTML page.  It can also stored externally on a separate file or website.  Advantage of storing the function externally is 
+        easier to read codes and faster loading of the HTML page.
+        </p>
+    </section><!--end of section where To-->
+
+    <section class="main-section" id="Output">
+        <header>Output</header>
+        <p>You can display JavaScript using properties: innerHTML, document.write(), window.alert(), or console.log().
+        </p>
+        <p>innerHTML property must link to an id within the HTML page.  An example:</p>
+        <code>
+            < body><br>
+            < h>Example of innerHTML < /h><br>
+            < p id="demo">< /p><br>
+            < script> document.getElementById("demo").innerHTML="Example of innerHTML property."; < /scrip><br>
+            < /body>
+        </code>
+        <p>Example of document.write(). This property should only be use for testing.  Using this property after HTML load will erase other html elements.</p>
+        <code>
+            < script> document.write( 5+6); < /script>
+        </code>
+        <p>Window.alert allows a new window popout with your desired message.  An example:</p>
+        <code>
+            < script>window.alert(5+6); < /script>
+        </code>
+        <p>console.log() is only useful for debugging. An example:</p>
+        <code>
+            < script> console.log(5+6); < /script>
+        </code>
+    
+    </section><!--end of section Output-->
+    <br>
+    <section class="main-section" id="Statements">
+        <header>Statements</header>
+        <p>A computer program is a list of instructions followed by the computer.  In JavaScript programming, this list
+        of instructions are called "statemnets".  Statements are comprise of value, operators, expressions, keywords, and comments.
+        An example of a statement is document.getElementById("demo").innerHTML="Example of innerHTML property.";</p>
+
+        <p>Satements are exercuted on the order it is written and always end with a ;.  Statements can also be group together by declaring
+        a function using {};  For example: </p>
+        <code>
+        function myFunction() {<br>
+            document.getElementById("demo1").innerHTML = "Hello Dolly!";<br>
+            document.getElementById("demo2").innerHTML = "How are you?";<br>
+            }
+        </code>
+    </section><!--end of section statmnets-->
+    <br>
+    <section class="main-section" id="Syntax">
+        <header>Syntax</header>
+        <p>JavaScript syntax is a set of rules.  Syntax is defined by fixed value or variable values.  Example of fixed value is
+        a set of numbers (with or without decimals) or strings (text messages), which can be written with single or double quotes.</p>
+        <p>syntax variables varies based on declarations, operators, identifiers, keywords, and commands.  To declare a variable, you 
+        would use the property var.  Variables are used together with operators (+,-,=,*,/) to compute a value. For example:</p>
+        <code>
+        < script><br>
+            var x, y;<br>
+                x = 5;<br>
+                y = 6;<br>
+            documnent.getElementById('demo'),innerHTML = (x+y);
+        < /script>
+    </code>
+    </section><!--end of section Syntax-->
+
+    <section class="main-section" id="Comments">
+        <header>Comments</header>
+        <p>Sometimes you need to document something to organize your thoughts.  The way to do that is by using the // for single line comments 
+        or /*  and */ for multi-line comments.  For example:</p>
+        <code>
+        < body><br>
+            < h1 id="myH">< /h1><br>
+            < p id="myP">< /p><br>
+            < script><br>
+            /*
+            The code below will change
+            the heading with id = "myH"
+            and the paragraph with id = "myP"
+            */<br>
+            document.getElementById("myH").innerHTML = "JavaScript Comments";<br>
+            document.getElementById("myP").innerHTML = "My first paragraph.";<br>
+            < /script><br>
+        < /body><br>
+        </code><br><br>
+    <footer> All information is from <a href="https://www.w3schools.com" target="_blank">W3Schools.</a></footer>
+</main><!--end of main-doc-->
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
