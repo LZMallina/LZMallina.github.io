@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Landing Page Project</title>
+<style>
+/*global styling*/
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Nunito+Sans&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+html{
+    font-size:10px;
+}
+body{
+    background:#fac528;
+    font-family:'Nunito Sans', sans-serif;
+}
+li{
+    list-style:none;
+    float:left;
+    padding:2rem;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+
+/*Creating the logo using css flexbox*/
+header{
+    position:fixed;
+    top:0;
+    min-height:75px;
+    padding:0px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fac528;
+}
+@media (max-width:600px){
+    header{
+        flex-wrap:wrap;
+    }
+}
+.logo{
+    width:70vw;
+    display:flex;
+}
+@media(max-width:650){
+    .logo >img{
+        margin:0 auto;
+    }
+}
+.logo >span{
+    font-size:4rem;
+    font-family:'Great Vibes',cursive;
+    padding-top:25px;
+    padding-left:10px;
+}
+@media(max-width:650px){
+    .logo{
+        margin-top:15px;
+        width:100%;
+        position:relative;
+    }
+}
+.nav-link{
+    font-size:2rem;
+
+}
+@media (max-width:650px){
+    nav{
+        margin-top:10px;
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        padding:0 50px;
+    }
+}
+@media (max-width:650px){
+    nav > ul{
+        flex-direction: column;
+    }
+}
+/*styling the section container*/
+section{
+    display:block;
+    margin:auto;
+    width:90%;
+    padding-top:10%;
+    padding:5%;
+    text-align:center;
+    font-size:3rem;
+    
+}
+section >h2{
+    
+    padding-top:5vw;
+}
+form{
+    
+    display:block;
+    margin:auto;
+    width:50vw;
+}
+@media (max-width:650px){
+    form{
+        margin-top:120px;
+    }
+}
+#email{
+    font-size:1.5rem;  
+    font-style:italic;
+    text-align:center;
+    padding:1rem;
+}
+#submit{
+    background:#ade890;
+    font-size:1.75rem;
+    display:block;
+    margin:auto;
+    width:25%;
+    border-radius:10px;
+    cursor:pointer;
+}
+/*video*/
+#video{
+    display:block;
+    margin:auto;
+    padding:5vw;
+}
+/*styling the service container*/
+#service{
+    display:block;
+    margin:auto;
+    width:65vw;
+    text-align:left;
+    padding:5vw;
+}
+@media (max-width:550px){
+    #service {
+        display:none;
+    }
+}
+.service-pic{
+    width:80px;
+    float:left;
+}
+h5::first-line{
+    color:green;
+    font-size:4rem;
+}
+/*creating the css flex container for price*/
+.flex-container{ 
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+    background:white;
+}
+@media (max-width:800px){
+    .flex-container{
+        flex-direction: column;
+    }
+}
+.flex-container > div{
+    border: solid brown;
+    padding:6rem;
+    text-align:center;
+    align-items:center;
+    width:400px;
+    margin:2px;
+}
+.flex-container >div> h3{
+    background:#fac528;
+    text-align:center;
+    font-size:3rem;
+    padding:1rem;
+}
+.flex-container >div>ul> li{
+    
+    list-style:disc;
+    font-size:2rem;
+    padding:1rem;
+    width:300px;
+    margin:10px;
+    text-align:left;
+        
+}
+.flex-container > div>button{
+    background:#ade890;
+    font-size:1.75rem;
+    border-radius:10px;
+    padding:1.5rem;
+    cursor:pointer;  
+}
+footer{
+    background:#f2de68;
+    padding:30px;
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    
+}
+footer >ul > li{
+    font-size:2rem;
+}
+footer >span{
+    font-size:1rem;
+    color:gray;
+}
+</style>
+</head>
+<body>
+<!--Create the Logo-->
+
+<header id="header">
+<div class="logo">
+<img id="header-img" src="https://www.netclipart.com/pp/m/17-173402_dollar-sign-money-united-states-dollar-money-tree.png"
+  alt="a picture of money growing on trees" width=100px;>
+<span>JKM Financial</span>
+</div><!--close div for logo-->
+<!--creating the navigation links-->
+<nav id="nav-bar">
+<ul>
+<li><a href="#service" class="nav-link">Service</a></li>
+<li><a href="#products" class="nav-link">How it works?</a></li>
+<li><a href="#price" class="nav-link">Pricing</a></li>
+</ul>
+</nav>
+</header>
+
+<section><!--include form, video,service,footer-->
+<h2>Our Mission Is To Make You Rich</h2>
+<br>
+<form id= "form"
+     action= "https://www.freecodecamp.com/email-submit">
+<input
+ type="email"
+ id="email" 
+ name="email" 
+ placeholder="Enter your e-mail for more information"
+ size="40"
+ required
+ >
+ <br><br>
+<input id="submit" type="submit" value="Let's Get Rich">
+
+</form>
+
+<!--financial video-->
+<div id="products">
+<iframe id="video" width="800" height="525" src="https://www.youtube.com/embed/Oi9cq7tXkmg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<!--creating a container call services-->
+<div id="service">
+<img class="service-pic" src="https://www.pngitem.com/pimgs/m/30-306388_family-black-and-white-clipart-family-family-clip.png" alt="clipart of family">
+<h5>Customized Profolio <br>Our financial advisers put your family need first.</h5><br>
+<img class="service-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRa1qorrL59EnVF02Cp2vhMAsLJMKhgJGbxbAFq9d_e8Hu8S4rx" alt="clipart of phone">
+<h5>Personal Assistance <br>Our financial advisers are available 24hrs and 7 days a week.</h5><br>
+<img class="service-pic" src="https://www.netclipart.com/pp/m/1-14155_black-and-white-money-clipart-dollar-sign-clipart.png" alt="clipart of dollar sign">
+<h5>Wealth Protection<br>We can help you protect your wealth during economic downturns.</h5>
+</div><!--div for service container-->
+
+<!--creating the flext container-->
+<div id="price" class="flex-container">
+<div><!--first div box-->
+<h3>Mutual Funds</h3>
+<ul>
+<li>Minimum investment: $3000</li>
+<li>Monthly Service: 0.1% of gain</li>
+<li>Type: Passive Investment</li>
+<li>Goal: 7 to 10% Annual Growth</li>
+<li>Risk: Low</li>
+<li>Portfolio: S&P500</li>
+</ul>
+<button type="submit">Select</button>
+</div><!--end of first div box-->
+
+<div><!--2nd div box-->
+<h3>Bonds</h3>
+<ul>
+<li>Minium Investment: $3000</li>
+<li>Monthly Service: 0.01% of gain</li>
+<li>Type: Passive Investment</li>
+<li>Goal: 2 to 4% Annual Growth</li>
+<li>Risk: Very low</li>
+<li>Portfolio: 50/50 Tbill/Junk</li><br><br>
+</ul>
+<button type="submit">Select</button>
+</div><!--end of 2nd div box-->
+
+<div><!--3rd div box-->
+<h3>Stocks</h3>
+<ul>
+<li>Inital Deposite Required: $100</li>
+<li>Monthly Service: 1% of gain</li>
+<li>Type: Active Investment</li>
+<li>Goal: >30% Annual Growth</li>
+<li>RisK: High</li>
+<li>Portfolio: Personalized </li>
+</ul>
+<button type="submit">Select</button>
+</div><!--end of 3rd div box-->
+
+</div><!--div for the flex container-->
+
+<footer>
+<ul>
+<li><a href='#'>Privacy</a></li>
+<li><a href='#'>Terms</a></li>
+<li><a href='#'>Contact</a></li>
+</ul>
+<span>Copright &copy; 2020, JKM Financial</span>
+</footer>
+
+</section>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
