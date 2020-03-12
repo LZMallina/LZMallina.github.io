@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Survey Form Challenge</title>
+<link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    boxing-size:border-box;
+}
+html{
+    background-image:url('cutedogcat.jpg');
+    background-size:400px 300px;
+    font-size:10px;
+}
+body{
+    font-size:2.5rem;
+    font-family:'Muli';
+    line-height:1.5;
+    margin:0;
+    }
+section{
+    background:#517EB3;
+    display:block;
+    margin:auto;
+    width:95vw;
+    padding:5rem;
+    border-radius:5px;
+}
+@media(min-width:815px){
+    section{ max-width:600px;}
+}
+
+.content{
+    background:#D2DDEB;
+    display:block;
+    margin:auto;
+    width:35vw;
+    padding:2.5rem;
+    border-radius:5px;
+}
+@media(max-width:815px){
+    .content{padding:2rem;
+            width:50vw;
+    }
+}
+h1{
+    font-size:4rem;
+    text-align:center;
+    color:white;
+}
+p{
+    font-size:1.5rem;
+    text-align:center;
+    color:white;
+    font-style:italic;
+}
+#name,#email,#dropdown,#number,#favorite{
+    display:block;
+    margin:auto;
+    text-align:justify;
+    font-size:2rem;
+    width:35vw;
+    height:auto;
+    border:solid grey;
+    border-radius:5px;
+}
+@media (max-width:815px){
+    #name,#email,#dropdown,#number,#favorite{
+        width:50vw;
+    }
+}
+.radio-button{
+    width:20px;
+    height:20px;
+}
+.checker{
+    width:20px;
+    height:20px;
+}
+textarea{
+    display:block;
+    margin:auto;
+    width:100%;
+    text-align:justify;
+    font-size:2rem;
+    border:solid grey;
+    border-radius:5px;
+}
+#submit{
+    background:#ace600;
+    display:block;
+    margin:auto;
+    width:50%;
+    font-size:3rem;
+}
+</style>
+</head>
+<body>
+<section>
+<h1 id="title">Cats vs Dogs Pets Survey Form</h1>
+<p id="description">The Mallina Family needs to decide on whether to adopt a cat or a dog for a pet.
+<br>Thank you for helping us on this decision.</p>
+
+<div class="content">
+<form id="survey-form">
+
+<label for ="name" id="name-label">Name<br></label>
+<input
+ type="text" id="name"
+ placeholder="Enter your name" 
+ required 
+ name="name">
+<br>
+<label for ="email" id="email-label">Email<br></label>
+<input type="email" id="email"
+placeholder="Enter your email" 
+required 
+name="email">
+<br>
+<label for "number" id="number-label">Age (optional)<br></label>
+<input type="number" id="number"
+placeholder="Enter your age"
+required
+name="age"
+max="114"
+min="5">
+<br>
+<label for="dropdown">What kind of pets do you currently have?<br></label>
+<select name="pets" id="dropdown">
+<option value="" disable selected>Select your current pet</option>
+<option value="cat">Cat</option>
+<option value="dog">Dog</option>
+<option value="fish">Fish</option>
+<option value="none">I don't have a pet</option>
+</select>
+<br>
+<label>Would you recommend your type of pet?<br>
+<input type="radio" name="recommend" value="yes"class="radio-button">Yes<br>
+<input type="radio" name="recommend" value="no" class="radio-button">No<br>
+<input type="radio" name="recommend" value="no opinion" class="radio-button">No Opinion
+</label>
+<br>
+<label>What is your favorite the part of having a pet?<br></label>
+<select name="favorite" id="favorite">
+<option value=""disable selected>Select your option</option>
+<option value="Have a best friend">Having a best friend</option>
+<option value="Unconditional Love">Unconditional love</option>
+<option value="None">None, I don't recommend having a pet</option>
+</select>
+<br>
+<label>What don't you like about having a pet? (Check all that applies)<br>
+<input type="checkbox" name="unlike" value="Feed it" class="checker">I have to feed it<br>
+<input type="checkbox" name="unlike" value="Clean it" class="checker">I have to clean it<br>
+<input type="checkbox" name="unlike" value="Walk it" class="checker">I have to walk it<br>
+<input type="checkbox" name="unlike" value="Play with it" class="checker">I have to play with it<br>
+<input type="checkbox" name="unlike" value="Nothing" class="checker">I love everything about my pet<br>
+</label>
+<br>
+<label>Additional comments?<br></label>
+<textarea rows="5" cols="auto">Enter your comments here:</textarea>
+<br>
+<button type="submit" id="submit">Submit</button>
+</form>
+</div>
+</section>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>
