@@ -1,0 +1,35 @@
+/* global  */
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    --orange:#ffa500;
+}
+html{
+    font-size:10px;
+}
+body{
+    font-family:'Baloo Chettan 2', cursive;
+    font-size:2rem;
+    background-image:url("./moodyforest.jpeg");
+    background-repeat:no-repeat;
+    background-position:left;
+    background-size:20vw 100vh;
+    background-attachment:fixed;
+}
+@media (max-width:815px){
+    body{
+    background-size:10px 70rem;
+    }
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+a:hover{
+    color:white;
+}
