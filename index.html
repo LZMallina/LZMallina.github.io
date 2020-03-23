@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homepage for my portfolio</title>
+<link rel="stylesheet" href="./css/homepage.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+/*Navigation Bar*/
+#navbar{
+    background:#d9d9d9; 
+    display:flex;
+    position:fixed;
+    width:100vw;
+    margin:0;
+    padding-right:5vw;
+    flex-direction:row;
+    justify-content:flex-end;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+#navbar >ul >li{
+    list-style:none;
+    float:left;
+    padding:2vw;
+    margin:10px;
+}
+/*popout box when hoover*/
+.tooltiptext{
+    visibility:hidden;
+    background:#e6f2ff;
+    color:black;
+    width:300px;
+    position:absolute;
+    top:90px;
+    right:475px;
+    text-align:center;
+    font-size:2rem;
+    border:solid;
+    border-radius:10px;
+}
+/*tooltiptext arrow*/
+.tooltip .tooltiptext::after{
+    content:"";
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin-left:-8px;
+    border-width:10px;
+    border-style:solid;
+    border-color:transparent transparent black transparent;
+}
+/*Show tooltip text when mouse hover*/
+.tooltip:hover .tooltiptext{
+    visibility:visible;
+}
+
+/*Welcome section*/
+#welcome-section{
+    display:block;
+    margin:auto;
+    width:100vw;
+    height:100vh;
+}
+.welcome-section{
+    position:relative;
+    text-align:center;
+    top:25rem;
+    font-size:4rem;
+    z-index:-1;
+}
+#projects{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    margin:auto;
+    width:75vw;
+    justify-content:space-evenly;
+}
+.project-tile{
+    text-align:center;
+    padding:3rem;
+    border:solid #cccccc;
+    border-radius:5px;
+    margin:10px;
+}
+#end-header{   text-align:center;
+    margin-top:40px;
+}
+/*contact section*/
+footer{
+    background:#d9d9d9; 
+    display:flex;
+    width:100%;
+    justify-content:center;
+}
+.contact{
+    float:left;
+    list-style:none;
+    padding:5rem;
+}
+@media (max-width:815px){
+    .welcome-section{
+        font-size:3rem;
+    }
+    #end-header{
+        font-size:1.75rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+    <ul>
+        <li><div class="tooltip">About Me
+        <p class="tooltiptext">Self-taught programmer who had held too many jobs to list here.  For more information about my past,<a href="about_me.html" target="_blank"> <strong style="color:var(--orange)">CLICK HERE.</strong></a></P>
+        </div></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<div id="welcome-section">
+    <h1 class="welcome-section">Welcome To My Project Page</h1>
+    <p class="welcome-section">Hope you enjoys them!</p><br><br><br><br><br><br><br>
+    <h2 class="welcome-section">HTML and CSS Projects</h2>
+</div>
+<!--Project summary section-->
+<section id="projects">
+<div class="project-tile">
+    <a href="TributetoMotherTeresa.html" target="_blank">
+    <img src="./pictures/MotherTeresa.png" alt="A tribute to Mother Teresa">
+    </a>
+    <p>A Tribute to Mother Teresa</p>
+</div>
+<div class="project-tile">  
+    <a href="Technical_doc-page.html" target="_blank">
+    <img src="./pictures/technicalDoc.png" alt=" Technical Documentation Page">
+    </a>
+    <p>Technical Documentation Page<p>
+</div>
+<div class="project-tile">
+    <a href="landingpage.html" target="_blank">
+    <img src="./pictures/landingPage.png" alt="Landing page">
+    </a>
+    <p>A fictional landing page</p>
+</div>
+<div class="project-tile">
+    <a href="Surveyform.html" target="_blank">
+    <img src="./pictures/surveyForm.png"alt="survey form">
+    </a>
+    <p>Survey Form</p>
+</div>
+<div class="project-tile">
+    <a href="animationwebsite.html" target="_blank">
+    <img src="./pictures/animation.png" alt="An animation webpage">
+    </a>
+    <p>Animation Page</p>
+</div>
+</section>
+<div id="end-header">
+    <h1>Do you have a project that I can help?</h1>
+    <h2>Let's work together....</h2>
+</div>
+<!--contact section-->
+<footer id="contact">
+    <ul>
+    <li class="contact">
+        <a href="https://github.com/LZMallina" target="_blank" id="profile-link"><i class="fa fa-github"></i>Github</a></li>
+    <li class="contact">
+        <a href="https://www.linkedin.com/in/lili-zhao-423404b7/" target="_blank"><i class="fa fa-linkedin-square"></i>LinkedIn</a></li>
+    <li class='contact'>
+        <a href="mailto:lzhao1976@gmail.com">&#9993 E-mail</a>
+    </li>
+    <li class="contact">
+        <a href="tel:555-555-5555">&#9742 Call me!</a>
+    </li>
+    </ul>
+</footer>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
