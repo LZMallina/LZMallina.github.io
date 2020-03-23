@@ -18,101 +18,70 @@ body{
     background:#fac528;
     font-family:'Nunito Sans', sans-serif;
 }
-li{
-    list-style:none;
-    float:left;
-    padding:2rem;
-}
 a{
     color:black;
     text-decoration:none;
 }
-
-/*Creating the logo using css flexbox*/
-header{
-    position:fixed;
-    top:0;
-    min-height:75px;
-    padding:0px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#fac528;
+a:hover{
+    color:white;
 }
-@media (max-width:600px){
-    header{
-        flex-wrap:wrap;
-    }
-}
+/*styling the logo*/
 .logo{
-    width:70vw;
+    display:block;
+    font-size:2vw;
+    font-family:'Great Vibes'
+}
+#header-img{
+    width:6vw;
+    float:left;
+}
+/*styling the nav-bar*/
+header{
+    background:#fac528;
+    position:fixed;
+    display:block;
+    width:100vw;
+    height:15vh;
+    z-index:1;
+}
+nav{
     display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:2rem;
+    width:100vw;
+    height:15vh;
+    position:absolute;
+    top:5%;
 }
-@media(max-width:650){
-    .logo >img{
-        margin:0 auto;
-    }
-}
-.logo >span{
-    font-size:4rem;
-    font-family:'Great Vibes',cursive;
-    padding-top:25px;
-    padding-left:10px;
-}
-@media(max-width:650px){
-    .logo{
-        margin-top:15px;
-        width:100%;
-        position:relative;
-    }
-}
-.nav-link{
+nav> ul> li{
+    list-style:none;
+    float:left;
+    margin:10px;
+    padding:2rem;
     font-size:2rem;
-
-}
-@media (max-width:650px){
-    nav{
-        margin-top:10px;
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-        padding:0 50px;
-    }
-}
-@media (max-width:650px){
-    nav > ul{
-        flex-direction: column;
-    }
 }
 /*styling the section container*/
 section{
     display:block;
-    margin:auto;
-    width:90%;
-    padding-top:10%;
-    padding:5%;
+    margin:10vw;
+    width:80vw;
+    position:absolute;
+    top:25%;
     text-align:center;
     font-size:3rem;
     
 }
 section >h2{
-    
     padding-top:5vw;
 }
 form{
-    
     display:block;
     margin:auto;
     width:50vw;
 }
-@media (max-width:650px){
-    form{
-        margin-top:120px;
-    }
-}
 #email{
+    width:30vw;
     font-size:1.5rem;  
     font-style:italic;
     text-align:center;
@@ -123,28 +92,39 @@ form{
     font-size:1.75rem;
     display:block;
     margin:auto;
-    width:25%;
+    width:10vw;
     border-radius:10px;
     cursor:pointer;
+}
+@media (max-width:800px){
+    #email{
+        font-size:0.75rem;
+    }
+    #submit{
+        font-size:0.75rem;
+    }
 }
 /*video*/
 #video{
     display:block;
     margin:auto;
     padding:5vw;
+    width:80vw;
+    height:100vh;
+}
+@media (max-width:800px){
+    #video{
+        width:85vw;
+        height:50vh;
+    }
 }
 /*styling the service container*/
 #service{
     display:block;
     margin:auto;
-    width:65vw;
+    width:80vw;
     text-align:left;
     padding:5vw;
-}
-@media (max-width:550px){
-    #service {
-        display:none;
-    }
 }
 .service-pic{
     width:80px;
@@ -154,18 +134,25 @@ h5::first-line{
     color:green;
     font-size:4rem;
 }
+@media (max-width:800px){
+    #service{
+        background:blue;
+        font-size:2rem;
+    }
+    h5:first-line{
+        font-size:3rem;
+    }
+    .serive-pic{
+        width:40px;
+    }
+}
 /*creating the css flex container for price*/
 .flex-container{ 
     display:flex;
     flex-direction:row;
-    align-items:center;
-    justify-content:space-between;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
     background:white;
-}
-@media (max-width:800px){
-    .flex-container{
-        flex-direction: column;
-    }
 }
 .flex-container > div{
     border: solid brown;
@@ -173,6 +160,7 @@ h5::first-line{
     text-align:center;
     align-items:center;
     width:400px;
+    height:600px;
     margin:2px;
 }
 .flex-container >div> h3{
@@ -182,14 +170,12 @@ h5::first-line{
     padding:1rem;
 }
 .flex-container >div>ul> li{
-    
     list-style:disc;
     font-size:2rem;
     padding:1rem;
     width:300px;
     margin:10px;
     text-align:left;
-        
 }
 .flex-container > div>button{
     background:#ade890;
@@ -198,6 +184,7 @@ h5::first-line{
     padding:1.5rem;
     cursor:pointer;  
 }
+
 footer{
     background:#f2de68;
     padding:30px;
@@ -208,6 +195,9 @@ footer{
     
 }
 footer >ul > li{
+    list-style:none;
+    float:left;
+    padding:2rem;
     font-size:2rem;
 }
 footer >span{
@@ -218,23 +208,21 @@ footer >span{
 </head>
 <body>
 <!--Create the Logo-->
-
 <header id="header">
 <div class="logo">
 <img id="header-img" src="https://www.netclipart.com/pp/m/17-173402_dollar-sign-money-united-states-dollar-money-tree.png"
-  alt="a picture of money growing on trees" width=100px;>
-<span>JKM Financial</span>
+  alt="a picture of money growing on trees";><br>
+<p>JKM Financial</p>
 </div><!--close div for logo-->
-<!--creating the navigation links-->
+<!--creating the navigation bar-->
 <nav id="nav-bar">
-<ul>
-<li><a href="#service" class="nav-link">Service</a></li>
-<li><a href="#products" class="nav-link">How it works?</a></li>
-<li><a href="#price" class="nav-link">Pricing</a></li>
-</ul>
+    <ul>
+    <li><a href="#service" class="nav-link">Service</a></li>
+    <li><a href="#products" class="nav-link">How it works?</a></li>
+    <li><a href="#price" class="nav-link">Pricing</a></li>
+    </ul>
 </nav>
 </header>
-
 <section><!--include form, video,service,footer-->
 <h2>Our Mission Is To Make You Rich</h2>
 <br>
@@ -260,7 +248,7 @@ footer >span{
 
 <!--creating a container call services-->
 <div id="service">
-<img class="service-pic" src="https://www.pngitem.com/pimgs/m/30-306388_family-black-and-white-clipart-family-family-clip.png" alt="clipart of family">
+<img class="service-pic" src="https://www.pngitem.com/pimgs/m/30-306388_family-black-and-white-clipart-family-family-clip.png" height="80px" alt="clipart of family">
 <h5>Customized Profolio <br>Our financial advisers put your family need first.</h5><br>
 <img class="service-pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRa1qorrL59EnVF02Cp2vhMAsLJMKhgJGbxbAFq9d_e8Hu8S4rx" alt="clipart of phone">
 <h5>Personal Assistance <br>Our financial advisers are available 24hrs and 7 days a week.</h5><br>
@@ -270,17 +258,17 @@ footer >span{
 
 <!--creating the flext container-->
 <div id="price" class="flex-container">
-<div><!--first div box-->
-<h3>Mutual Funds</h3>
-<ul>
-<li>Minimum investment: $3000</li>
-<li>Monthly Service: 0.1% of gain</li>
-<li>Type: Passive Investment</li>
-<li>Goal: 7 to 10% Annual Growth</li>
-<li>Risk: Low</li>
-<li>Portfolio: S&P500</li>
-</ul>
-<button type="submit">Select</button>
+    <div><!--first div box-->
+    <h3>Mutual Funds</h3>
+    <ul>
+        <li>Minimum investment: $3000</li>
+        <li>Monthly Service: 0.1% of gain</li>
+        <li>Type: Passive Investment</li>
+        <li>Goal: 7 to 10% Annual Growth</li>
+        <li>Risk: Low</li>
+        <li>Portfolio: S&P500</li>
+    </ul>
+    <button type="submit">Select</button>
 </div><!--end of first div box-->
 
 <div><!--2nd div box-->
@@ -291,12 +279,12 @@ footer >span{
 <li>Type: Passive Investment</li>
 <li>Goal: 2 to 4% Annual Growth</li>
 <li>Risk: Very low</li>
-<li>Portfolio: 50/50 Tbill/Junk</li><br><br>
+<li>Portfolio: 50/50 Tbill/Junk</li>
 </ul>
 <button type="submit">Select</button>
 </div><!--end of 2nd div box-->
 
-<div><!--3rd div box-->
+<div>
 <h3>Stocks</h3>
 <ul>
 <li>Inital Deposite Required: $100</li>
@@ -321,6 +309,5 @@ footer >span{
 </footer>
 
 </section>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
