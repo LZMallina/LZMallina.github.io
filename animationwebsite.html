@@ -28,72 +28,63 @@ h1{
     top:7%;
     
 }
+@media (max-width:800px){
+    h1{
+        font-size:3rem;
+    }
+}
 .waves{
     position:fixed;
     border-radius:45%;
     width:27vw;
     height:27vw;
-    bottom:-50%; 
+    bottom:-23vw; 
     animation-name: spin;
     animation-duration:3s;
     animation-iteration-count:infinite;
+    animation-timing-function:ease-in;
+    background:#5e91c1;
+}
+@media (max-width:800px){
+    .waves{
+        bottom:-16vw;
+    }
 }
 #wave-1{
-    background:#5e91c1;
     opacity:0.75;
     left:-6%;
-    animation-timing-function:ease-in;
-
 }
 #wave-2{
-    background:#5e91c1;
     opacity:0.35;
     left:5%;
-    animation-timing-function:ease-in;
-    
 }
 #wave-3{
-    background:#5e91c1;
     opacity:0.75;
     left:18%;
-    animation-timing-function:ease-in;
-
 }
 #wave-4{
-    background:#5e91c1;
     opacity:0.35;
     left:30%;
-    animation-timing-function:ease-in;
 }
 #wave-5{
-    background:#5e91c1;
     opacity:0.75;
     left:40%;
-    animation-timing-function:ease-in;
 }
 #wave-6{
-    background:#5e91c1;
     opacity:0.35;
     left:50%;
-    animation-timing-function:ease-in;
 }
 #wave-7{
-    background:#5e91c1;
     opacity:0.75;
     left:60%;
-    animation-timing-function:ease-in;
 }
 #wave-8{
-    background:#5e91c1;
     opacity:0.35;
     left:70%;
-    animation-timing-function:ease-in;
 }
 #wave-9{
-    background:#5e91c1;
     opacity:0.75;
     left:80%;
-    animation-timing-function:ease-in;
 }
 
 @keyframes spin {
@@ -112,36 +103,36 @@ h1{
 #star-1{
     width:1.5vw;
     height:1.5vw;
-    left:45rem;
-    top:15rem;
+    left:55vw;
+    top:15vw;
     animation-duration:2s;
 }
 #star-2{
     width:1vw;
     height:1vw;
-    left:60rem;
-    top:10rem;
+    left:60vw;
+    top:10vw;
     animation-duration:1s;
 }
 #star-3{
     width:2vw;
     height:2vw;
-    left:90rem;
-    top:10rem;
+    left:80vw;
+    top:10vw;
     animation-duration:3s;
 }
 #star-4{
     width:0.5vw;
     height:0.5vw;
-    left:80rem;
-    top:10rem;
+    left:75vw;
+    top:10vw;
     animation-duration:1.2s;
 }
 #star-5{
     width:2.5vw;
     height:2.5vw;
-    left:120rem;
-    top:5rem;
+    left:45vw;
+    top:5vw;
     animation-duration:2s;
 }
 @keyframes twinkle{
