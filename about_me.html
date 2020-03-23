@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Homepage for my portfolio</title>
+<link rel="stylesheet" href="./css/homepage.css">
+<style>
+:root{
+    --allcolor:#d9d9d9;
+}
+nav {
+    background:var(--allcolor);
+    display:flex;
+    text-align:center;
+    justify-content:space-evenly;
+    align-items:center;
+    text-transform:uppercase;
+    font-weight:bold;
+    padding:2rem;
+}
+nav >ul >li{
+    text-align:center;
+    width:20rem;
+    height:6rem;
+    border:white outset;
+    list-style:none;
+    float:left;
+    margin:5px;
+}
+
+section{
+    font-size:2rem;
+    display:block;
+    margin-left:20vw;
+    width:75vw;
+    padding:5rem;
+}
+section >h2{
+    font-size:4rem;
+    text-align:center;
+    padding:5rem 0 3rem 0;
+    border-bottom:solid var(--allcolor);
+}
+.content{
+    display:block;
+    padding:3rem;
+    width:70vw;
+    text-align:justify;
+}
+div >a{
+    background:var(--orange);
+    display:block;
+    width:100px;
+    height:50px;
+    position:fixed;
+    top:20%;
+    right:5%;
+    border-radius:10px;
+    text-align:center;
+    padding:1rem;
+    color:white;
+}
+/*making adjustment for media responsivenss*/
+@media (max-width:800px){
+    body{
+        display:grid;
+        grid-template-areas:
+        "nav nav nav nav nav nav"
+        "section section section section section section";
+        font-size:2vw;
+    }
+    nav{
+        width:25vw;
+        height:100vh;
+        overflow:visible;
+        display:block;
+        position:fixed;
+        padding:1rem;
+    }
+    nav >ul >li{
+    text-align:center;
+    width:20vw;
+    height:10vh;
+    border:white outset;
+    list-style:none;
+    margin:5px;
+    font-size:2vw;
+    padding:1rem;
+}
+    div >a{
+        display:none;
+    }
+}
+</style>
+</head>
+<body>
+<div id="top"></div>
+<nav>
+    <ul>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="#professional_life">Professional Life</a></li>
+        <li><a href="#leadership_experience">Leadership Experience</a></li>
+        <li><a href="#customer_service">Customer Service Skills</a></li>
+        <li><a href="#communication_skill">Communication Skills</a></li>
+        <li><a href="#scientific_publication">Publications</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+    </ul>
+</nav>
+<section>
+    <h2 id="professional_life">Professional life</h2>
+    <ul class="content">
+        <li>Research Scientist for 7 years at the University of California Davis, University of Iowa, and University of Michigan, performing research in drug delivery and tumor suppressor pathways, utilizing techniques such as PCR, RTPCR, western blots, ELISA etc.</li>
+        <li>Practiced Pharmacist in both inpatient, ambulatory, and retail settings for 11 years.</li>
+        <li>Began my new journey as a self-taught programmer a year ago.  So far, I have been exposed to HTML, CSS, JavaScript, Python, and SQL.  I am currently refining my skills by working in different projects.</li>
+    </ul>
+    <h2 id="leadership_experience">Leadership Experience</h2>
+    <ul class="content">
+        <li>Two years as laboratory supervisor at the University of Michigan Hospital System.  It was my responsibility to train new staff, manage the budgets of the laboratory, depose of any toxin generated from experiments, and purchase of equipments and chemicals.  I was also repsonsible for gathering data, design experiments, and assist writing for publications and grant writing.   </li>
+        <li>Two years combined as pharmacy manager at Walmart and Harris Teeter.  My responsibilities were to train staff, manage scheduling, inventory, pharmacy law compliance, and implement business plans to increase profit margin.</li>
+    </ul>
+    <h2 id="customer_service">Customer Service Experience</h2>
+    <ul class="content">
+    <li>I have over 16 yaers of customer service experience in the retail setting.  Currently, I am working part-time as bakery customer service representative at Wegman's.  I had received the excellent customer service award three years in a row while working at Harris Teeter.</li>
+    </ul>
+    <h2 id="communication_skill">Communication Skill</h2>
+    <ul class="content">
+        <li>I have taught in multiple settings including Pharmacy Techinican for 1 year at the Schoolcraft Community College in Michigan and Herbology at 4H club in Virginia.</li>
+        <li>I have presented in multiple scientific and pharmacy meetings including American Society of Clinical Oncology and American Society of Hospital Pharmacist.</li>
+    </ul>
+    <h2 id="scientific_publication">Scientific Publications</h2>
+    <ul class="content">
+        <li>Zhao L, Sweet BV. Lutein and zeaxanthin for macular degeneration. Am J Health Syst Pharm. 2008;65:1232-8.</li>
+        <li>Chen V, Posada M, Zhao L, Rosania G. A pathway for reversible doxorubicin cytotoxicity in leukemic cells. Pharm Res. 2007;24:2156-67.</li>
+        <li>Zhang W, Zhao L, Mulholland MW. Ghrelin stimulates myocyte development. Cell Physiol Biochem. 2007;20(5):659-64.</li>
+        <li>Zhang W, Zhao L, Lin TR, Chai B, Fan Y, Gantz I, Mulholland MW. Inhibition of adipogenesis by ghrelin. Mol Biol Cell. 2004;15:2484-91.</li>
+        <li>Zhao L, Samuels T, Winckler S, Korgaonkar C, Tompkins V, Horne MC, Quelle DE. Cyclin G1 has growth inhibitory activity linked to the ARF-Mdm2-p53 and pRb tumor suppressor pathways. Mol Cancer Res. 2003;1:195-206.</li>
+        <li>Korgoankar C., Zhao L., Modestous M., and Quelle  D.E. ARF function does not require p53 Stabilization or Mdm2 relocation.  Mol Cell Biol. 2002;22:196-206.</li>
+        <li>Rafanan ER. Jr., Lee L., Zhao L., Decker H, and Shen B. Cloning, Sequencing, and Heterologous Expression of the elmGHIJ Genes involved in the Biosynthesis of the Polyketide Antiobiotic Elloramycin from Streptomyces olivaceus Tu2353. J Nat Prod. 2001;64:444-9.</li>
+    </ul>
+<h2 id="hobbies">Hobbies</h2>
+    <ul class="content">
+        <li>Investing: I enjoyed analyzing stock charts and valuations to identify stocks that I can buy and sell at a good price.</li>
+        <li>Baking: trying out new reciepts to create the best cake and bread.</li>
+    </ul>
+</section>
+<div>
+    <a href="#top"><strong>TOP</strong></a>
+</div>
+</body>
+</html>
